@@ -1,0 +1,34 @@
+Department
+-
+Department_Number int pk FK >- Department_Employee.Department_Number
+Department_Name varchar(50)
+
+Department_Employee
+--
+Employee_Number FK >- Department_Manager.Employee_Number
+Department_Number int pk FK >- Department_Manager.Department_Number
+
+Department_Manager
+---
+Department_Number int pk 
+Employee_Number FK >- Salaries.Employee_Number
+
+Employee
+----
+Employee_Number FK >- Department_Employee.Employee_Number
+Employee_Title_ID
+Birth_Date
+First_Name
+Last_Name
+Sex
+Hire_Date
+
+Salaries
+-----
+Employee_Number
+Salary
+
+Titles
+------
+Title_ID
+Title
